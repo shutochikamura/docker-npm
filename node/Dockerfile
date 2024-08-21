@@ -1,2 +1,2 @@
-FROM node:18.14-alpine
-WORKDIR /app
+FROM node:20-alpine
+WORKDIR /var/app

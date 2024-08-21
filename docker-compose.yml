@@ -6,8 +6,10 @@ services:
       dockerfile: ./node/Dockerfile
     tty: true
     volumes:
-      - ./front:/app
+      - ../{front_services_dir}/:/var/app/:cached
     ports:
       - "3000:3000"
+    environment:
+      - WATCHPACK_POLLING=true
     # If you want to run `yarn dev` at docker compose startup
     # command: sh -c "yarn dev"
